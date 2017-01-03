@@ -1,0 +1,15 @@
+# Network
+github "Alamofire/Alamofire" ~> 4.0
+
+# Async
+github "bignerdranch/Deferred" "3.0.0-rc.1"
+
+#JSON
+github "SwiftyJSON/SwiftyJSON"
+
+#Result
+github "antitypical/Result"
+
+#Star Rating
+github "marketplacer/Cosmos" ~> 7.0
+

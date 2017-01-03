@@ -1,0 +1,8 @@
+*~
+.DS_Store
+*xcuserdata
+*xccheckout
+*.orig
+*.xcscmblueprint
+Cartfile.resolved
+Carthage/*

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="agP-NG-jet">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RUh-Lu-SDA">
+            <objects>
+                <navigationController id="agP-NG-jet" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oqJ-rJ-D2h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uX2-OE-hXT" kind="relationship" relationship="rootViewController" id="L8h-73-vc6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYE-aa-Y7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431" y="145"/>
+        </scene>
+        <!--饑啡城市-->
+        <scene sceneID="mAl-mq-XlV">
+            <objects>
+                <viewController id="uX2-OE-hXT" customClass="MainViewController" customModule="CoffeeViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="czZ-d3-ZUU"/>
+                        <viewControllerLayoutGuide type="bottom" id="3q1-qm-3jF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOf-JQ-HOe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfv-ip-4o6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uX2-OE-hXT" id="Fq3-Nr-Irx"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tan-nK-tk9" customClass="InfoPanel" customModule="CoffeeViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROr-DZ-7IM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dgw-Sa-FGV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <blurEffect style="extraLight"/>
+                                    </visualEffectView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="veh-af-VNY">
+                                        <rect key="frame" x="8" y="8" width="359" height="184"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OED-63-dgY">
+                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="184"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi 穩定度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-JC-9y2">
+                                                        <rect key="frame" x="47" y="0.0" width="86" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udn-Dg-nKF" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="5" y="30.5" width="170" height="31"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="價格便宜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU8-Gz-Lqg">
+                                                        <rect key="frame" x="55" y="61.5" width="69.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsP-GL-1Kh" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="5" y="92" width="170" height="30.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安靜程度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-9P-eIL">
+                                                        <rect key="frame" x="55" y="122.5" width="69.5" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yap-C2-hJp" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="5" y="153.5" width="170" height="30.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yGP-Yh-hcq">
+                                                <rect key="frame" x="179.5" y="0.0" width="179.5" height="184"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通常有位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCi-Vh-4Nl">
+                                                        <rect key="frame" x="55" y="0.0" width="69.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGf-po-2kg" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="5" y="30.5" width="170" height="31"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="裝潢音樂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOo-eo-egl">
+                                                        <rect key="frame" x="55" y="61.5" width="69.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnU-Vg-7e8" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="5" y="92" width="170" height="30.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咖啡好喝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB4-h1-CnL">
+                                                        <rect key="frame" x="55" y="122.5" width="69.5" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-Fm-enS" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="5" y="153.5" width="170" height="30.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yGP-Yh-hcq" firstAttribute="leading" secondItem="OED-63-dgY" secondAttribute="trailing" id="4JP-Eb-SHU"/>
+                                            <constraint firstItem="OED-63-dgY" firstAttribute="leading" secondItem="veh-af-VNY" secondAttribute="leading" id="ErE-NL-1di"/>
+                                            <constraint firstAttribute="bottom" secondItem="yGP-Yh-hcq" secondAttribute="bottom" id="Jsa-Rt-kQa"/>
+                                            <constraint firstItem="yGP-Yh-hcq" firstAttribute="leading" secondItem="OED-63-dgY" secondAttribute="trailing" id="Vbv-m2-eNb"/>
+                                            <constraint firstItem="OED-63-dgY" firstAttribute="top" secondItem="veh-af-VNY" secondAttribute="top" id="gfB-7h-AAz"/>
+                                            <constraint firstAttribute="trailing" secondItem="yGP-Yh-hcq" secondAttribute="trailing" id="he6-e2-zNK"/>
+                                            <constraint firstItem="yGP-Yh-hcq" firstAttribute="top" secondItem="veh-af-VNY" secondAttribute="top" id="rpC-oJ-Rnu"/>
+                                            <constraint firstAttribute="bottom" secondItem="OED-63-dgY" secondAttribute="bottom" id="uBC-sE-PhL"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="veh-af-VNY" firstAttribute="top" secondItem="tan-nK-tk9" secondAttribute="top" constant="8" id="3mm-LP-gvW"/>
+                                    <constraint firstAttribute="height" constant="200" id="7if-qV-JzF"/>
+                                    <constraint firstItem="ROr-DZ-7IM" firstAttribute="leading" secondItem="tan-nK-tk9" secondAttribute="leading" id="8zd-qc-h2k"/>
+                                    <constraint firstAttribute="trailing" secondItem="ROr-DZ-7IM" secondAttribute="trailing" id="BY8-9c-6ei"/>
+                                    <constraint firstItem="ROr-DZ-7IM" firstAttribute="top" secondItem="tan-nK-tk9" secondAttribute="top" id="VwE-kh-8tZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ROr-DZ-7IM" secondAttribute="trailing" id="e1Y-5Y-tOI"/>
+                                    <constraint firstAttribute="bottom" secondItem="ROr-DZ-7IM" secondAttribute="bottom" id="hvX-3L-jR5"/>
+                                    <constraint firstAttribute="bottom" secondItem="veh-af-VNY" secondAttribute="bottom" constant="8" id="m6r-YU-psh"/>
+                                    <constraint firstAttribute="bottom" secondItem="ROr-DZ-7IM" secondAttribute="bottom" id="mb1-3q-hHo"/>
+                                    <constraint firstAttribute="trailing" secondItem="veh-af-VNY" secondAttribute="trailing" constant="8" id="oCy-LH-WCh"/>
+                                    <constraint firstItem="veh-af-VNY" firstAttribute="leading" secondItem="tan-nK-tk9" secondAttribute="leading" constant="8" id="rM1-18-jYf"/>
+                                    <constraint firstItem="ROr-DZ-7IM" firstAttribute="leading" secondItem="tan-nK-tk9" secondAttribute="leading" id="vHY-QO-9oo"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="infoPanelBottomConstraint" destination="sAw-qq-AyX" id="ckh-5Z-8Db"/>
+                                    <outletCollection property="starRatingView" destination="udn-Dg-nKF" collectionClass="NSMutableArray" id="4FE-TF-td9"/>
+                                    <outletCollection property="starRatingView" destination="IGf-po-2kg" collectionClass="NSMutableArray" id="lYg-d9-ZOz"/>
+                                    <outletCollection property="starRatingView" destination="OsP-GL-1Kh" collectionClass="NSMutableArray" id="SGN-sb-eXi"/>
+                                    <outletCollection property="starRatingView" destination="jnU-Vg-7e8" collectionClass="NSMutableArray" id="3yr-ls-pNp"/>
+                                    <outletCollection property="starRatingView" destination="yap-C2-hJp" collectionClass="NSMutableArray" id="RmK-bs-vbj"/>
+                                    <outletCollection property="starRatingView" destination="fXT-Fm-enS" collectionClass="NSMutableArray" id="hNQ-WF-92H"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zf-NU-6Qk">
+                                <rect key="frame" x="307" y="399" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aZg-nb-JMI"/>
+                                    <constraint firstAttribute="width" constant="60" id="fSw-hZ-xMZ"/>
+                                </constraints>
+                                <state key="normal" image="user_location"/>
+                                <connections>
+                                    <action selector="userLocationButtonDown:" destination="uX2-OE-hXT" eventType="touchUpInside" id="ANV-Dk-mVW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sfv-ip-4o6" secondAttribute="trailing" id="6fH-nK-K1z"/>
+                            <constraint firstItem="sfv-ip-4o6" firstAttribute="leading" secondItem="SOf-JQ-HOe" secondAttribute="leading" id="TbK-ED-Qi7"/>
+                            <constraint firstItem="5Zf-NU-6Qk" firstAttribute="trailing" secondItem="SOf-JQ-HOe" secondAttribute="trailingMargin" constant="8" id="Zej-L8-EiW"/>
+                            <constraint firstItem="tan-nK-tk9" firstAttribute="trailing" secondItem="sfv-ip-4o6" secondAttribute="trailing" id="a2I-i7-qaa"/>
+                            <constraint firstItem="tan-nK-tk9" firstAttribute="leading" secondItem="sfv-ip-4o6" secondAttribute="leading" id="dWm-Vc-Fhg"/>
+                            <constraint firstItem="3q1-qm-3jF" firstAttribute="top" secondItem="sfv-ip-4o6" secondAttribute="bottom" id="kgf-vP-Rkp"/>
+                            <constraint firstItem="tan-nK-tk9" firstAttribute="bottom" secondItem="3q1-qm-3jF" secondAttribute="top" id="sAw-qq-AyX"/>
+                            <constraint firstItem="sfv-ip-4o6" firstAttribute="top" secondItem="czZ-d3-ZUU" secondAttribute="bottom" id="u3e-YX-jdL"/>
+                            <constraint firstItem="tan-nK-tk9" firstAttribute="top" secondItem="5Zf-NU-6Qk" secondAttribute="bottom" constant="8" symbolic="YES" id="vZC-rB-Zal"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="饑啡城市" id="I8A-HC-44N">
+                        <barButtonItem key="rightBarButtonItem" title="清單" id="IbZ-JA-jfA">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="O02-KR-kJV" kind="show" identifier="ListSegue" id="sM6-iZ-t64"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoPanel" destination="tan-nK-tk9" id="XS1-e3-J6g"/>
+                        <outlet property="mapView" destination="sfv-ip-4o6" id="UXc-tT-GG6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdz-9w-hzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="143.47826086956522"/>
+        </scene>
+        <!--清單-->
+        <scene sceneID="v3s-I5-Z9c">
+            <objects>
+                <tableViewController id="O02-KR-kJV" customClass="ShopListViewController" customModule="CoffeeViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kFX-Xt-m70">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatingCell" rowHeight="50" id="AVU-03-A0s" customClass="RatingCell" customModule="CoffeeViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AVU-03-A0s" id="Mbi-EU-MJn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-8P-eTY">
+                                            <rect key="frame" x="16" y="14.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="aw1-WL-eUe" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="201" y="9" width="170" height="31"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DkK-8P-eTY" firstAttribute="centerY" secondItem="Mbi-EU-MJn" secondAttribute="centerY" id="4FB-UR-MHP"/>
+                                        <constraint firstItem="DkK-8P-eTY" firstAttribute="leading" secondItem="Mbi-EU-MJn" secondAttribute="leadingMargin" constant="8" id="BbT-fM-DIx"/>
+                                        <constraint firstAttribute="trailing" secondItem="aw1-WL-eUe" secondAttribute="trailing" constant="4" id="JJP-DK-6Ze"/>
+                                        <constraint firstAttribute="bottom" secondItem="aw1-WL-eUe" secondAttribute="bottom" constant="9" id="S2n-Wy-E2w"/>
+                                        <constraint firstItem="aw1-WL-eUe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DkK-8P-eTY" secondAttribute="trailing" constant="20" id="jQ1-W9-tHX"/>
+                                        <constraint firstItem="aw1-WL-eUe" firstAttribute="top" secondItem="Mbi-EU-MJn" secondAttribute="top" constant="9" id="uqG-YA-q8m"/>
+                                        <constraint firstAttribute="trailing" secondItem="aw1-WL-eUe" secondAttribute="trailing" constant="4" id="ygd-cK-kzn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="DkK-8P-eTY" id="Vof-cf-wRJ"/>
+                                    <outlet property="starView" destination="aw1-WL-eUe" id="OEh-PG-BjO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O02-KR-kJV" id="xJR-pP-7f7"/>
+                            <outlet property="delegate" destination="O02-KR-kJV" id="3lz-v3-80S"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="清單" id="CWi-EC-v5f">
+                        <barButtonItem key="rightBarButtonItem" title="排序依..." id="e2G-tH-aZZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="changeOrderAction:" destination="O02-KR-kJV" id="5BW-tP-9XB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="SRF-jo-q2W" kind="show" identifier="DetailSegue" id="imT-Og-ucm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbE-0r-dg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213.5999999999999" y="142.57871064467767"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="jhh-0G-sI6">
+            <objects>
+                <viewController id="SRF-jo-q2W" customClass="ShopDetailViewController" customModule="CoffeeViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTt-8V-SQS"/>
+                        <viewControllerLayoutGuide type="bottom" id="PA8-ss-qXw"/>
+                    </layoutGuides>
+                    <view key="view" tag="2" contentMode="scaleToFill" id="uAn-xx-qOJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T9h-Yh-hvq">
+                                <rect key="frame" x="16" y="72" width="343" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F0s-R4-cbR">
+                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi 穩定度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1k-p3-aJ7">
+                                                <rect key="frame" x="38" y="0.0" width="86" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEN-rH-dHz" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="33.5" width="161.5" height="33"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="價格便宜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxC-Ov-mdB">
+                                                <rect key="frame" x="46" y="66.5" width="69.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="396-2d-1kR" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="100" width="161.5" height="33.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安靜程度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FO8-rJ-EiL">
+                                                <rect key="frame" x="46" y="133.5" width="69.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b72-aq-RiF" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="166.5" width="161.5" height="33.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-QK-htx">
+                                        <rect key="frame" x="181.5" y="0.0" width="161.5" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通常有位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PZ-mm-W5v">
+                                                <rect key="frame" x="46" y="0.0" width="69.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-NL-wWO" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="33.5" width="161.5" height="33"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="裝潢音樂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cz2-CZ-fQX">
+                                                <rect key="frame" x="46" y="66.5" width="69.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-jy-lpr" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="100" width="161.5" height="33.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咖啡好喝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFe-sa-iig">
+                                                <rect key="frame" x="46" y="133.5" width="69.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxJ-EV-l1B" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="166.5" width="161.5" height="33.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SzS-QK-htx" secondAttribute="bottom" id="0C6-Lv-Hmz"/>
+                                    <constraint firstAttribute="bottom" secondItem="F0s-R4-cbR" secondAttribute="bottom" id="I45-gW-OyG"/>
+                                    <constraint firstItem="SzS-QK-htx" firstAttribute="top" secondItem="T9h-Yh-hvq" secondAttribute="top" id="hHE-sm-8yI"/>
+                                    <constraint firstItem="F0s-R4-cbR" firstAttribute="leading" secondItem="T9h-Yh-hvq" secondAttribute="leading" id="hLO-Qv-d34"/>
+                                    <constraint firstAttribute="height" constant="200" id="xs2-QB-QNN"/>
+                                    <constraint firstItem="F0s-R4-cbR" firstAttribute="top" secondItem="T9h-Yh-hvq" secondAttribute="top" id="yLx-u5-qwn"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXW-Zr-o1t">
+                                <rect key="frame" x="16" y="292" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At5-gX-1T2">
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="50"/>
+                                        <color key="backgroundColor" red="0.78431372549019607" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="官方網站">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="websiteButtonDown:" destination="SRF-jo-q2W" eventType="touchUpInside" id="LEw-tj-Tqi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-Ln-6Xl">
+                                        <rect key="frame" x="174" y="0.0" width="169" height="50"/>
+                                        <color key="backgroundColor" red="0.7843137255" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="立即前往">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="routingButtonDown:" destination="SRF-jo-q2W" eventType="touchUpInside" id="t4e-dm-YNJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4TL-L5-7BU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wXW-Zr-o1t" secondAttribute="trailing" id="2Jp-ef-4jR"/>
+                            <constraint firstItem="wXW-Zr-o1t" firstAttribute="top" secondItem="T9h-Yh-hvq" secondAttribute="bottom" constant="20" id="FxR-JH-BWT"/>
+                            <constraint firstItem="T9h-Yh-hvq" firstAttribute="top" secondItem="WTt-8V-SQS" secondAttribute="bottom" constant="8" id="OCr-Mf-bLe"/>
+                            <constraint firstItem="wXW-Zr-o1t" firstAttribute="leading" secondItem="uAn-xx-qOJ" secondAttribute="leadingMargin" id="fbj-rX-DlW"/>
+                            <constraint firstItem="T9h-Yh-hvq" firstAttribute="leading" secondItem="uAn-xx-qOJ" secondAttribute="leadingMargin" id="xIv-42-80z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9h-Yh-hvq" secondAttribute="trailing" id="y3I-fx-MvX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="eQC-Ao-WXL"/>
+                    <connections>
+                        <outlet property="routingButton" destination="Lhg-Ln-6Xl" id="48H-vW-KUr"/>
+                        <outlet property="websiteButton" destination="At5-gX-1T2" id="Ei9-YW-Ram"/>
+                        <outletCollection property="starRatingView" destination="jEN-rH-dHz" collectionClass="NSMutableArray" id="efv-Ql-WBL"/>
+                        <outletCollection property="starRatingView" destination="396-2d-1kR" collectionClass="NSMutableArray" id="nat-KI-wdj"/>
+                        <outletCollection property="starRatingView" destination="b72-aq-RiF" collectionClass="NSMutableArray" id="hx6-Q9-ZNX"/>
+                        <outletCollection property="starRatingView" destination="kfY-NL-wWO" collectionClass="NSMutableArray" id="lMf-tI-8vM"/>
+                        <outletCollection property="starRatingView" destination="g3m-jy-lpr" collectionClass="NSMutableArray" id="OaF-bx-yrJ"/>
+                        <outletCollection property="starRatingView" destination="sxJ-EV-l1B" collectionClass="NSMutableArray" id="yXD-Bu-ZTi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuJ-Hy-xey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="user_location" width="128" height="128"/>
+    </resources>
+</document>
