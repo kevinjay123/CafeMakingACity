@@ -30,6 +30,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		343C188E202401FC007ACB70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA49B11E0A217300510BDB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB126CBC1E53685C00054E95;
+			remoteInfo = MobileDeferred;
+		};
+		343C1890202401FC007ACB70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA49B11E0A217300510BDB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB126CC41E53685D00054E95;
+			remoteInfo = MobileDeferredTests;
+		};
+		343C1892202401FC007ACB70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA49B11E0A217300510BDB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB126CD81E53686900054E95;
+			remoteInfo = TVDeferred;
+		};
+		343C1894202401FC007ACB70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA49B11E0A217300510BDB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB126CE01E53686900054E95;
+			remoteInfo = TVDeferredTests;
+		};
+		343C1896202401FC007ACB70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA49B11E0A217300510BDB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB126CF41E53687300054E95;
+			remoteInfo = NanoDeferred;
+		};
 		3487F32C1E13C832004D1880 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3487F3241E13C832004D1880 /* Cosmos.xcodeproj */;
@@ -188,7 +223,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 34FA49B11E0A217300510BDB /* Deferred.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = DB524C701D851E3800DDF16D;
+			remoteGlobalIDString = DB126C9F1E53685300054E95;
 			remoteInfo = Deferred;
 		};
 		34FA49FB1E0A21DD00510BDB /* PBXContainerItemProxy */ = {
@@ -339,6 +374,11 @@
 			children = (
 				34FA49B71E0A217400510BDB /* Deferred.framework */,
 				34FA49B91E0A217400510BDB /* DeferredTests.xctest */,
+				343C188F202401FC007ACB70 /* Deferred.framework */,
+				343C1891202401FC007ACB70 /* MobileDeferredTests.xctest */,
+				343C1893202401FC007ACB70 /* Deferred.framework */,
+				343C1895202401FC007ACB70 /* TVDeferredTests.xctest */,
+				343C1897202401FC007ACB70 /* Deferred.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -395,6 +435,7 @@
 					34FA497E1E0A1E8F00510BDB = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = XF5G3H79TE;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -436,6 +477,41 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		343C188F202401FC007ACB70 /* Deferred.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Deferred.framework;
+			remoteRef = 343C188E202401FC007ACB70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		343C1891202401FC007ACB70 /* MobileDeferredTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MobileDeferredTests.xctest;
+			remoteRef = 343C1890202401FC007ACB70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		343C1893202401FC007ACB70 /* Deferred.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Deferred.framework;
+			remoteRef = 343C1892202401FC007ACB70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		343C1895202401FC007ACB70 /* TVDeferredTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TVDeferredTests.xctest;
+			remoteRef = 343C1894202401FC007ACB70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		343C1897202401FC007ACB70 /* Deferred.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Deferred.framework;
+			remoteRef = 343C1896202401FC007ACB70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3487F32D1E13C832004D1880 /* Cosmos.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -551,7 +627,7 @@
 		34FA49E61E0A218900510BDB /* SwiftyJSON OSX Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "SwiftyJSON OSX Tests.xctest";
+			path = "SwiftyJSON macOS Tests.xctest";
 			remoteRef = 34FA49E51E0A218900510BDB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -754,7 +830,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kevinjay.CoffeeViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -768,7 +845,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kevinjay.CoffeeViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

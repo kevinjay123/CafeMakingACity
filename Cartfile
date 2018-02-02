@@ -2,7 +2,7 @@
 github "Alamofire/Alamofire" ~> 4.0
 
 # Async
-github "bignerdranch/Deferred" "3.0.0-rc.1"
+github "bignerdranch/Deferred" ~> 3.0.0
 
 #JSON
 github "SwiftyJSON/SwiftyJSON"
