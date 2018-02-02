@@ -4,5 +4,6 @@
 *xccheckout
 *.orig
 *.xcscmblueprint
+*.idea
 Cartfile.resolved
 Carthage/*
